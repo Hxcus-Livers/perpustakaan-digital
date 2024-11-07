@@ -1,0 +1,1039 @@
+/* Variabel warna */
+:root {
+    --white: #fff;
+    --light-gray: #f0f0f3;
+    --dark-gray: #2e2e3e;
+    --dark-bg: #1a1a2e;
+    --light-bg: #c9d6ff;
+    --light-shadow: rgba(0, 0, 0, 0.15);
+    --dark-shadow: rgba(0, 0, 0, 0.2);
+    --highlight: #f1c40f;
+    --text-light: #e4e6eb;
+    --text-dark: #333;
+}
+
+/* Background Gradient */
+body.bg-gradient {
+    background: linear-gradient(to right, var(--light-bg), #e2e2e2);
+}
+
+/* Main Card & Neumorphic Card */
+.card,
+.main-card,
+.neumorphic-button,
+.book-card {
+    background: var(--light-gray);
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px var(--light-shadow),
+    -5px -5px 10px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card,
+.book-card,
+.main-card {
+    padding: 15px;
+}
+
+.main-card {
+    background: rgba(var(--white), 0.9);
+}
+
+.neumorphic-button,
+.neumorphic-input,
+.book-card {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.book-card {
+    margin-bottom: 15px;
+}
+
+.neumorphic-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.neumorphic-input,
+.neumorphic-button {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--light-shadow),
+    -5px -5px 10px rgba(255, 255, 255, 0.7);
+}
+
+.neumorphic-button:hover,
+.book-card:hover,
+.shadow-neumorphic:hover {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2),
+    -3pc -3px 7px rgba(255, 255, 255, 0.7);
+    transition: translateY(-2px);
+}
+
+.theme-dark {
+    background-color: var(--dark-bg) !important;
+    color: var(--text-light) !important;
+}
+
+.theme-dark .card,
+.theme-dark .book-card,
+.theme-dark .main-card {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    box-shadow: 5px 5px 15px var(--dark-shadow),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .neumorphic-button,
+.theme-dark .neumorphic-input {
+    background: var(--dark-gray);
+    color: var(--text-light);
+}
+
+.theme-dark .neumorphic-button:hover {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3),
+    -3px -3px 7px rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .btn-toggle {
+    color: var(--highlight);
+}
+
+.theme-dark .bi-moon-stars-fill {
+    display: none;
+}
+
+.theme-light .bi-sun-fill {
+    display: none;
+}
+
+.theme-light .btn-toggle {
+    color: var(--text-dark);
+}
+
+.shadow-neumorphic {
+    box-shadow: 6px 6px 15px var(--dark-shadow),
+    -6px -6px 15px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.swal2-popup {
+    font-size: 1.1rem;
+    border-radius: 12px;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card,
+    .main-card,
+    .book-card {
+        padding: 12px;
+        margin: 10px 0;
+    }
+
+    .neumorphic-button,
+    .neumorphic-input {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card,
+    .main-card,
+    .book-card {
+        padding: 10px;
+        margin: 8px 0;
+    }
+    
+    .swal2-popup {
+        font-size: 0.9rem;
+    }
+}
+
+/* Enhanced card styles */
+.card,
+.main-card,
+.neumorphic-button,
+.book-card {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Improved hover effects */
+.neumorphic-button:hover,
+.book-card:hover,
+.shadow-neumorphic:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 15px var(--light-shadow),
+                -8px -8px 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Grid system */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+/* Floating Books Animation */
+.floating-books {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-book {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.2;
+    animation: float-up linear infinite;
+}
+
+.theme-dark .floating-book {
+    color: var(--text-light);
+}
+
+.theme-light .floating-book {
+    color: var(--text-dark);
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-book {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-book {
+        font-size: 1rem;
+    }
+}
+
+/* Container styling */
+.containter {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Center card content */
+.card.my-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .container {
+        max-width: 95%;
+    }
+    .card.my-card {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .card.my-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Tambahkan animasi-animasi baru */
+
+/* Floating Books Animation dengan Parallax Effect */
+.floating-element {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-element:nth-child(1) { top: 10%; left: 10%; animation: floatParallax 8s ease-in-out infinite; font-size: 2rem; }
+.floating-element:nth-child(2) { top: 20%; right: 15%; animation: floatParallax 12s ease-in-out infinite 1s; font-size: 1.8rem; }
+.floating-element:nth-child(3) { bottom: 15%; left: 20%; animation: floatParallax 10s ease-in-out infinite 2s; font-size: 2.2rem; }
+.floating-element:nth-child(4) { bottom: 25%; right: 10%; animation: floatParallax 9s ease-in-out infinite 3s; font-size: 1.5rem; }
+
+@keyframes floatParallax {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -15px) rotate(5deg); }
+    50% { transform: translate(-5px, 10px) rotate(-3deg); }
+    75% { transform: translate(-15px, -5px) rotate(2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Card Hover Animation */
+.book-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.book-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Button Hover Effects - menghapus animasi dan menambahkan glow effect */
+.btn {
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px var(--highlight);
+}
+
+/* Form Input Animation */
+.form-control {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.form-control:focus {
+    transform: translateY(-2px);
+    border-color: var(--highlight);
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.2);
+}
+
+/* Page Load Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card.my-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Theme Toggle Animation */
+.btn-toggle {
+    transition: all 0.4s ease;
+}
+
+.btn-toggle:hover {
+    transform: none;
+    animation: none;
+}
+
+/* Success/Error Message Animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.swal2-popup {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* Book List Item Animation */
+.book-card {
+    animation: fadeInUp 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.book-card:nth-child(2n) {
+    animation-delay: 0.2s;
+}
+
+.book-card:nth-child(3n) {
+    animation-delay: 0.4s;
+}
+
+/* 3D Book Flip Animation */
+.book-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.book-card:hover {
+    transform: rotateY(10deg) translateY(-5px);
+    box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Glowing Effect untuk Dark Theme */
+.theme-dark .book-card:hover {
+    box-shadow: 0 0 15px var(--highlight);
+    border: 1px solid var(--highlight);
+}
+
+/* Floating Icons dengan Trail Effect */
+.floating-element {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-element::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: blur(8px);
+    opacity: 0.3;
+    transform: scale(1.2);
+    animation: trailEffect 2s infinite;
+}
+
+@keyframes trailEffect {
+    0% { opacity: 0.3; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1.8); }
+}
+
+/* Pulse Animation untuk Submit Button */
+.btn-primary {
+    animation: none;
+}
+
+/* Shimmer Effect untuk Loading State */
+.loading-shimmer {
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.2) 50%, 
+        rgba(255,255,255,0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Success Message Pop Animation */
+.swal2-popup.swal2-show {
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Form Input Focus Animation */
+.form-control:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.3);
+    animation: inputGlow 1.5s infinite alternate;
+}
+
+@keyframes inputGlow {
+    from { box-shadow: 0 0 5px var(--highlight); }
+    to { box-shadow: 0 0 20px var(--highlight); }
+}
+
+/* Theme Toggle Spin Animation */
+.btn-toggle:hover {
+    animation: none;
+    transform: none;
+}
+
+/* Card Delete Animation */
+.book-card.deleting {
+    animation: deleteCard 0.5s ease-out forwards;
+}
+
+@keyframes deleteCard {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05) rotate(3deg); }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* Background Particles Effect */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background: var(--highlight);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatParticle 15s infinite linear;
+}
+
+@keyframes floatParticle {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+/* Background Animations */
+.background-animations {
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floating-icon {
+    position: absolute;
+    opacity: 0;
+    animation: float-animation var(--duration) linear infinite;
+    color: var(--text-dark);
+}
+
+.theme-dark .floating-icon {
+    color: var(--text-light);
+}
+
+/* Posisi dan timing yang berbeda untuk setiap icon */
+.floating-icon:nth-child(1) {
+    --duration: 15s;
+    left: 10%;
+    font-size: 2rem;
+    animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+    --duration: 18s;
+    left: 25%;
+    font-size: 1.8rem;
+    animation-delay: 2s;
+}
+
+.floating-icon:nth-child(3) {
+    --duration: 20s;
+    left: 40%;
+    font-size: 2.2rem;
+    animation-delay: 4s;
+}
+
+.floating-icon:nth-child(4) {
+    --duration: 17s;
+    left: 55%;
+    font-size: 1.7rem;
+    animation-delay: 6s;
+}
+
+.floating-icon:nth-child(5) {
+    --duration: 19s;
+    left: 70%;
+    font-size: 2.1rem;
+    animation-delay: 8s;
+}
+
+.floating-icon:nth-child(6) {
+    --duration: 16s;
+    left: 85%;
+    font-size: 1.9rem;
+    animation-delay: 10s;
+}
+
+.floating-icon:nth-child(7) {
+    --duration: 21s;
+    left: 15%;
+    font-size: 2.3rem;
+    animation-delay: 12s;
+}
+
+.floating-icon:nth-child(8) {
+    --duration: 14s;
+    left: 75%;
+    font-size: 1.6rem;
+    animation-delay: 14s;
+}
+
+/* Animasi floating */
+@keyframes float-animation {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Efek hover pada floating icons */
+.floating-icon {
+    transition: transform 0.3s ease;
+}
+
+.floating-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-icon {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-icon {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Tambahkan efek blur saat dark mode */
+.theme-dark .floating-icon {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+/* Tambahkan efek glow saat light mode */
+.theme-light .floating-icon {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+}
+
+/* Tambahkan styles untuk quote card */
+.quote-card {
+    background: linear-gradient(135deg, var(--highlight), #f39c12);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.2);
+    margin-bottom: 2rem;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.quote-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 8rem;
+    font-family: Georgia, serif;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+}
+
+.quote-card::after {
+    content: '"';
+    position: absolute;
+    bottom: -60px;
+    right: 20px;
+    font-size: 8rem;
+    font-family: Georgia, serif;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+}
+
+/* Dark theme adjustments */
+.theme-dark .quote-card {
+    background: linear-gradient(135deg, var(--highlight-dark), var(--highl));
+}
+
+/* Quote transition animation */
+.quote-text {
+    transition: opacity 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quote-card {
+        padding: 1.2rem;
+    }
+    
+    .quote-text {
+        font-size: 1rem;
+    }
+    
+    .quote-card::before,
+    .quote-card::after {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-card {
+        padding: 1rem;
+    }
+    
+    .quote-text {
+        font-size: 0.9rem;
+    }
+    
+    .quote-card::before,
+    .quote-card::after {
+        font-size: 4rem;
+    }
+}
+
+/* Search styling */
+.search-container {
+    max-width: 300px;
+    width: 100%;
+}
+
+.search-input {
+    border: 2px solid transparent;
+    background: var(--light-gray);
+    padding-right: 40px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--highlight);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
+    transform: translateY(-1px);
+}
+
+.theme-dark .search-input {
+    background: var(--dark-gray);
+    color: var(--text-light);
+}
+
+.search-icon {
+    background: transparent;
+    border: none;
+    color: var(--text-dark);
+}
+
+.theme-dark .search-icon {
+    color: var(--text-light);
+}
+
+/* Responsive search */
+@media (max-width: 768px) {
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--highlight);
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: var(--highlight-dark);
+}
+
+.theme-dark .scroll-to-top-btn {
+    background: var(--highlight-dark);
+}
+
+.theme-dark .scroll-to-top-btn:hover {
+    background: var(--highlight);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Add these styles */
+.synopsis-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.theme-dark .synopsis-text {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.book-info {
+    margin-bottom: 1rem;
+}
+
+.badge {
+    font-weight: normal;
+    padding: 0.35em 0.65em;
+}
+
+select.form-select {
+    background-image: none;
+    padding-right: 1rem;
+}
+
+textarea.form-control {
+    border-radius: 1rem;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Add these styles */
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    background: var(--highlight) !important;
+}
+
+.theme-dark .badge {
+    background: var(--highlight-dark) !important;
+}
+
+.gap-3 {
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .d-flex.align-items-center.gap-3 {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* Book Stats Card */
+.book-stats-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--highlight);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stats-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.stats-icon i {
+    font-size: 1.5rem;
+}
+
+.stats-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.stats-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.theme-dark .book-stats-card {
+    background: var(--highlight-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .book-stats-card {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Empty Search Result Card */
+.empty-search-card {
+    padding: 2rem;
+    margin: 2rem 0;
+    background: var(--card-bg);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.empty-search-card i {
+    color: var(--highlight);
+    opacity: 0.7;
+}
+
+.empty-search-card .card-title {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.theme-dark .empty-search-card {
+    background: var(--dark-card-bg);
+}
+
+.theme-dark .empty-search-card .card-title {
+    color: var(--text-light);
+}
+
+/* Animation for empty search card */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.empty-search-card {
+    animation: fadeInUp 0.4s ease-out;
+}
+

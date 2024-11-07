@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpusatakaan Sekolah Digital</title>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gradient theme-light">
+    <div class="background-animations">
+        <i class="floating-icon fas fa-book"></i>
+        <i class="floating-icon fas fa-scroll"></i>
+        <i class="floating-icon fas fa-book-dead"></i>
+        <i class="floating-icon fas fa-book-open"></i>
+        <i class="floating-icon fas fa-file-alt"></i>
+        <i class="floating-icon fas fa-book-medical"></i>
+        <i class="floating-icon fas fa-book-reader"></i>
+        <i class="floating-icon fas fa-bookmark"></i>
+        <i class="floating-icon fas fa-feather-alt"></i>
+        <i class="floating-icon fas fa-pencil-alt"></i>
+        <i class="floating-icon fas fa-glasses"></i>
+        <i class="floating-icon fas fa-journal-whills"></i>
+        <i class="floating-icon fas fa-atlas"></i>
+        <i class="floating-icon fas fa-pen-fancy"></i>
+        <i class="floating-icon fas fa-quran"></i>
+        <i class="floating-icon fas fa-book-spells"></i>
+    </div>
+
+    <div class="container my-5">
+        <div class="card my-card shadow-lg">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="text-center mb-4">Perpusatakaan Digital</h1>
+                    <button id="theme-toggle" class="btn btn-toggle shadow-neumorphic">
+                        <i id="theme-icon" class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+
+                <!-- Form Buku -->
+                <div id="book-form" class="mb-4"></div>
+
+                <!-- List Buku -->
+                <div id="book-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    />
+    <script type="module" src="./src/main.js"></script>
+
+    <!-- Tambahkan sebelum closing body tag -->
+    <button id="scrollToTop" class="scroll-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
